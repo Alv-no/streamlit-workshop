@@ -10,6 +10,16 @@ watchdog==3.0.0
 # Pandas: Data manipulation and analysis
 pandas
 
+# matplotlib: Creating nice plots data
+matplotlib
+
+# pydantic: Data validation using Python type hints.
+pydantic==2.6.0
+
+# plotly: An open-source, interactive data visualization library for Python
+plotly==5.18.0
+
+
 
 
 # Development tools: Packages used for development, testing, and code quality

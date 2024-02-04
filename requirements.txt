@@ -6,6 +6,8 @@
 #
 altair==5.2.0
     # via streamlit
+annotated-types==0.6.0
+    # via pydantic
 asttokens==2.4.1
     # via icecream
 attrs==23.2.0
@@ -28,8 +30,14 @@ click==8.1.7
     #   streamlit
 colorama==0.4.6
     # via icecream
+contourpy==1.2.0
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 executing==2.0.1
     # via icecream
+fonttools==4.47.2
+    # via matplotlib
 gitdb==4.0.11
     # via gitpython
 gitpython==3.1.41
@@ -48,10 +56,14 @@ jsonschema==4.21.1
     # via altair
 jsonschema-specifications==2023.12.1
     # via jsonschema
+kiwisolver==1.4.5
+    # via matplotlib
 markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.5
     # via jinja2
+matplotlib==3.8.2
+    # via -r requirements.in
 mdurl==0.1.2
     # via markdown-it-py
 nodeenv==1.8.0
@@ -59,6 +71,8 @@ nodeenv==1.8.0
 numpy==1.26.3
     # via
     #   altair
+    #   contourpy
+    #   matplotlib
     #   pandas
     #   pyarrow
     #   pydeck
@@ -67,6 +81,7 @@ packaging==23.2
     # via
     #   altair
     #   build
+    #   matplotlib
     #   plotly
     #   streamlit
 pandas==2.2.0
@@ -75,7 +90,9 @@ pandas==2.2.0
     #   altair
     #   streamlit
 pillow==10.2.0
-    # via streamlit
+    # via
+    #   matplotlib
+    #   streamlit
 pip-tools==7.3.0
     # via -r requirements.in
 plotly==5.18.0
@@ -84,20 +101,29 @@ protobuf==4.25.2
     # via streamlit
 pyarrow==15.0.0
     # via streamlit
+pydantic==2.6.0
+    # via -r requirements.in
+pydantic-core==2.16.1
+    # via pydantic
 pydeck==0.8.1b0
     # via streamlit
 pygments==2.17.2
     # via
     #   icecream
     #   rich
+pyparsing==3.1.1
+    # via matplotlib
 pyproject-hooks==1.0.0
     # via build
 pyright==1.1.349
     # via -r requirements.in
 python-dateutil==2.8.2
     # via
+    #   matplotlib
     #   pandas
     #   streamlit
+python-restcountries==2.0.0
+    # via -r requirements.in
 pytz==2024.1
     # via pandas
 referencing==0.33.0
@@ -105,7 +131,9 @@ referencing==0.33.0
     #   jsonschema
     #   jsonschema-specifications
 requests==2.31.0
-    # via streamlit
+    # via
+    #   python-restcountries
+    #   streamlit
 rich==13.7.0
     # via streamlit
 rpds-py==0.17.1
@@ -133,7 +161,10 @@ toolz==0.12.1
 tornado==6.4
     # via streamlit
 typing-extensions==4.9.0
-    # via streamlit
+    # via
+    #   pydantic
+    #   pydantic-core
+    #   streamlit
 tzdata==2023.4
     # via pandas
 tzlocal==5.2

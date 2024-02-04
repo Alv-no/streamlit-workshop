@@ -1,4 +1,9 @@
 import streamlit as st
+from frontend_logic.session_state_logic import (
+    get_name_state,
+    init_name_state,
+    set_name_state,
+)
 
 from frontend_widgets.pause_widget import short_break_widget
 
@@ -20,6 +25,12 @@ st.markdown(
 """
 )
 
+init_name_state()
+name = st.text_input("Your name:")
+if not get_name_state() and name:
+    set_name_state(name)
+    st.balloons()
+
 # Detailed Agenda
 with st.expander("📅 Agenda - Detaljert"):
     st.markdown(
@@ -39,7 +50,7 @@ with st.expander("📅 Agenda - Detaljert"):
 ### 🛠️ Del 2: Setup og oppgave - 20 min
 - **Case-presentasjon**: Utvikle en enkel applikasjon
 - **Verktøy og oppsett**: Virtual environment og pip-tools
-- **Oppgave**: API-integrering og datavisualisering
+- **Oppgave**: Global Countries Data Visualization
 """
     )
 
