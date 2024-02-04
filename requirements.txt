@@ -34,6 +34,8 @@ contourpy==1.2.0
     # via matplotlib
 cycler==0.12.1
     # via matplotlib
+deadcode==2.2.2
+    # via -r requirements.in
 executing==2.0.1
     # via icecream
 fonttools==4.47.2
@@ -153,6 +155,8 @@ tenacity==8.2.3
     #   streamlit
 toml==0.10.2
     # via streamlit
+tomli==2.0.1
+    # via deadcode
 toolz==0.12.1
     # via altair
 tornado==6.4

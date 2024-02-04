@@ -36,6 +36,9 @@ pyright
 # Plotly: Interactive graphing library for Python
 plotly
 
+# deadcode: package to view for unused functions
+deadcode
+
 # Icecream: A tool for debugging, making print debugging easier
 icecream
 
