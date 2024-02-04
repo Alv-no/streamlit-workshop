@@ -1,7 +1,10 @@
-import streamlit as st
-import pandas as pd
-from data.example_df import example_data_dict
 import json
+
+import numpy as np
+import pandas as pd
+import streamlit as st
+
+from data.example_df import example_data_dict
 
 # Interactive Components 🛠️
 st.header("Interactive Components 🛠️")
@@ -21,7 +24,7 @@ st.subheader("Data Editor:")
 st.write(":snake: **Python Code:**")
 st.code(
     """
-# Updated data with additional columns
+import pandas as pd
 data = {
     'Name': ['Anna', 'Bob', 'Charlie'],
     'Age': [25, 30, 35],
@@ -29,7 +32,7 @@ data = {
     'Occupation': ['Engineer', 'Doctor', 'Artist'],
     'Hobbies': ['Reading', 'Traveling', 'Painting']
 }
-st.data_editor('Edit data', data, use_container_width=True)
+st.data_editor('Edit data', pd.DataFrame(data), use_container_width=True)
 """,
     language="python",
 )
@@ -184,3 +187,40 @@ st.write(":snake: **Python Code:**")
 st.code('st.color_picker("Pick a color")', language="python")
 st.write(":eyes: **Displays:**")
 st.color_picker("Pick a color")
+
+st.divider()
+
+# Subheader for the map
+st.subheader("Map:")
+
+# Displaying the Python code for a color picker as an example
+st.write(":snake: **Python Code:**")
+st.code(
+    """
+import numpy as np
+
+np.random.seed(42)  # For reproducible results
+n = 10  # Number of points
+latitudes = np.random.uniform(low=57.9, high=71.2, size=n)
+longitudes = np.random.uniform(low=4.8, high=31.2, size=n)
+
+# Creating a DataFrame with these points
+data = pd.DataFrame({"lat": latitudes, "lon": longitudes})
+
+
+st.map(data)
+    """,
+    language="python",
+)
+
+np.random.seed(42)  # For reproducible results
+n = 10  # Number of points
+latitudes = np.random.uniform(low=57.9, high=71.2, size=n)
+longitudes = np.random.uniform(low=4.8, high=31.2, size=n)
+
+# Creating a DataFrame with these points
+data = pd.DataFrame({"lat": latitudes, "lon": longitudes})
+
+# Display the map with random points in Norway
+st.write(":eyes: **Displays:**")
+st.map(data)

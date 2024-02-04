@@ -70,6 +70,7 @@ nodeenv==1.8.0
     # via pyright
 numpy==1.26.3
     # via
+    #   -r requirements.in
     #   altair
     #   contourpy
     #   matplotlib
@@ -122,8 +123,6 @@ python-dateutil==2.8.2
     #   matplotlib
     #   pandas
     #   streamlit
-python-restcountries==2.0.0
-    # via -r requirements.in
 pytz==2024.1
     # via pandas
 referencing==0.33.0
@@ -131,9 +130,7 @@ referencing==0.33.0
     #   jsonschema
     #   jsonschema-specifications
 requests==2.31.0
-    # via
-    #   python-restcountries
-    #   streamlit
+    # via streamlit
 rich==13.7.0
     # via streamlit
 rpds-py==0.17.1

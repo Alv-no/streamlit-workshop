@@ -19,6 +19,8 @@ pydantic==2.6.0
 # plotly: An open-source, interactive data visualization library for Python
 plotly==5.18.0
 
+# numpy: data calculations fast 
+numpy
 
 
 
