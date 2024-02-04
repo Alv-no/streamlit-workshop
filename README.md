@@ -58,5 +58,5 @@ Please make sure to replace `venv` with the name of your virtual environment dir
 Run the Streamlit application:
 
 ```
-streamlit run run.py
+streamlit run Home.py
 ```
